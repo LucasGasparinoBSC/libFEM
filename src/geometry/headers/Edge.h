@@ -24,17 +24,17 @@ class Edge
 {
     private:
         // Data
-        int eID;                   // Edge ID
-        int eNumPoints;            // Number of points in the edge
-        float eLength;             // Length of the edge
-        std::vector<Point> ePoint; // Edge points
+        int edgeID;                   // Edge ID
+        int edgeNumPoints;            // Number of points in the edge
+        float edgeLength;             // Length of the edge
+        std::vector<Point> edgePoint; // Edge points
         // Methods
     public:
         // Data
         // Methods
 
         // Constructor
-        Edge(int n1, int n2);
+        Edge(int n1, int n2, std::vector<Point> p);
         // Destructor
         ~Edge();
 

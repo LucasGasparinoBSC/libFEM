@@ -20,11 +20,13 @@
  * 
  * @param n1 Edge ID
  * @param n2 Number of points in the edge
+ * @param p Edge points
  */
-Edge::Edge(int n1, int n2)
+Edge::Edge(int n1, int n2, std::vector<Point> p)
 {
-    eID = n1;
-    eNumPoints = n2;
+    edgeID = n1;
+    edgeNumPoints = n2;
+    edgePoint = p;
 }
 
 // Destructor
@@ -47,7 +49,7 @@ Edge::~Edge()
  */
 int Edge::getEdgeID()
 {
-    return eID;
+    return edgeID;
 }
 
 /**
@@ -58,7 +60,7 @@ int Edge::getEdgeID()
  */
 int Edge::getEdgeNumPoints()
 {
-    return eNumPoints;
+    return edgeNumPoints;
 }
 
 /**
@@ -70,7 +72,7 @@ int Edge::getEdgeNumPoints()
 
 float Edge::getEdgeLength()
 {
-    return eLength;
+    return edgeLength;
 }
 
 // Setters
@@ -86,7 +88,7 @@ float Edge::getEdgeLength()
  */
 void Edge::computeEdgeLength()
 {
-    std::vector<float> eBegin = ePoint[0].getPointXYZ();
-    std::vector<float> eEnd = ePoint[1].getPointXYZ();
-    eLength = sqrt(pow(eEnd[0] - eBegin[0], 2) + pow(eEnd[1] - eBegin[1], 2) + pow(eEnd[2] - eBegin[2], 2));
+    std::vector<float> eBegin = edgePoint[0].getPointXYZ();
+    std::vector<float> eEnd = edgePoint[1].getPointXYZ();
+    edgeLength = sqrt(pow(eEnd[0] - eBegin[0], 2) + pow(eEnd[1] - eBegin[1], 2) + pow(eEnd[2] - eBegin[2], 2));
 }

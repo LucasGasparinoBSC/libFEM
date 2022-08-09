@@ -14,6 +14,7 @@
 
 // STL libraries
 #include <vector>
+#include <cmath>
 
 // Classes to include
 #include "Point.h"
@@ -24,16 +25,17 @@ class Element
 {
     private:
         // Data
-        int eID;                   // Element ID
         // Methods
     protected:
         // Data
-        int eNumPoints;            // Number of points in the element
-        int eNumEdges;             // Number of edges in the element
-        int eNumFaces;             // Number of faces in the element
-        std::vector<Point> ePoint; // Element points
-        std::vector<Edge> eEdge;   // Element edges
-        std::vector<Face> eFace;   // Element faces
+        int elemID;                   // Element ID
+        int elemNumPoints;            // Number of points in the element
+        int elemNumEdges;             // Number of edges in the element
+        int elemNumFaces;             // Number of faces in the element
+        int elemOrder;                // Order of the element
+        std::vector<Point> elemPoint; // Element points
+        std::vector<Edge> elemEdge;   // Element edges
+        std::vector<Face> elemFace;   // Element faces
         // Methods
     public:
         // Data
@@ -42,6 +44,9 @@ class Element
         Element();
         // Destructor
         ~Element();
+        // Getters
+        // Setters
+        // Other methods
 };
 
-#endif
+#endif // ELEMENT_H
