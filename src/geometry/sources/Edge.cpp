@@ -22,10 +22,9 @@
  * @param n2 Number of points in the edge
  * @param p Edge points
  */
-Edge::Edge(int n1, int n2, std::vector<Point> p)
+Edge::Edge(int n1, std::vector<Point> p)
 {
     edgeID = n1;
-    edgeNumPoints = n2;
     edgePoint = p;
 }
 
@@ -64,6 +63,17 @@ int Edge::getEdgeNumPoints()
 }
 
 /**
+ * @brief Get edge points attribute.
+ * @details The getEdgePoint method returns the edge points.
+ * 
+ * @return The edge points.
+ */
+std::vector<Point> Edge::getEdgePoints()
+{
+    return edgePoint;
+}
+
+/**
  * @brief Get edge length attribute.
  * @details The getEdgeLength method returns the length of the edge.
  * 
@@ -76,6 +86,16 @@ float Edge::getEdgeLength()
 }
 
 // Setters
+/**
+ * @brief Set edge number of points attribute.
+ * @details The setEdgeNumPoints method sets the number of points in the edge.
+ * 
+ * @param n The number of points in the edge.
+ */
+void Edge::setEdgeNumPoints(int n)
+{
+    edgeNumPoints = n;
+}
 
 // Other methods
 

@@ -23,15 +23,15 @@ class Face
 {
     private:
         // Data
-        int fID;                   // Face ID
-        int fNumPoints;            // Number of points in the face
-        std::vector<Point> fPoint; // Face points
+        int faceID;                    // Face ID
+        int faceNumPoints;             // Number of points in the face
+        std::vector<Point> facePoints; // Face points
         // Methods
     public:
         // Data
         // Methods
         // Constructor
-        Face(int n1, int n2);
+        Face(int n1, std::vector<Point> p);
         // Destructor
         ~Face();
         // Getters

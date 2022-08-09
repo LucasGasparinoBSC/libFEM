@@ -24,14 +24,14 @@ class Hexahedron : public Element
 {
     private:
         // Data
-        std::vector<Edge> hexEdges; // Hexahedron edges
-        std::vector<Face> hexFaces; // Hexahedron faces
+        std::vector<Edge> hexEdge; // Hexahedron edges
+        std::vector<Face> hexFace; // Hexahedron faces
         // Methods
     public:
         // Data
         // Methods
         // Constructor
-        Hexahedron(int n1, std::vector<Point> p);
+        Hexahedron(int n1, int n2, std::vector<Point> p);
         // Destructor
         ~Hexahedron();
         // Getters

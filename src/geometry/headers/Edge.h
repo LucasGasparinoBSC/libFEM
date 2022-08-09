@@ -34,16 +34,18 @@ class Edge
         // Methods
 
         // Constructor
-        Edge(int n1, int n2, std::vector<Point> p);
+        Edge(int n1, std::vector<Point> p);
         // Destructor
         ~Edge();
 
         // Getters
         int getEdgeID();
         int getEdgeNumPoints();
+        std::vector<Point> getEdgePoints();
         float getEdgeLength();
 
         // Setters
+        void setEdgeNumPoints(int n);
 
         // Other methods
         void computeEdgeLength();

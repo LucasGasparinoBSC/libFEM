@@ -21,10 +21,11 @@
  * @param n1 Face ID
  * @param n2 Number of points in the face
  */
-Face::Face(int n1, int n2)
+Face::Face(int n1, std::vector<Point> p)
 {
-    fID = n1;
-    fNumPoints = n2;
+    faceID = n1;
+    facePoints = p;
+    faceNumPoints = facePoints.size();
 }
 
 // Destructor
@@ -48,7 +49,7 @@ Face::~Face()
  */
 int Face::getFaceID()
 {
-    return fID;
+    return faceID;
 }
 
 /**
@@ -59,5 +60,5 @@ int Face::getFaceID()
  */
 int Face::getFaceNumPoints()
 {
-    return fNumPoints;
+    return faceNumPoints;
 }

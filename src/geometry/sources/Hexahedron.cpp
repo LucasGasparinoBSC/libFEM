@@ -9,11 +9,13 @@
  * 
  */
 
+#include <iostream>
 #include "Hexahedron.h"
 
-Hexahedron::Hexahedron(int n1, std::vector<Point> p)
+Hexahedron::Hexahedron(int n1, int n2, std::vector<Point> p)
 {
     elemID = n1;
+    elemOrder = n2;
     elemNumEdges = 12;
     elemNumFaces = 6;
     elemPoint = p;
@@ -26,43 +28,134 @@ Hexahedron::~Hexahedron()
 
 void Hexahedron::buildHexaEdges(std::vector<Point> p)
 {
+    // Initialize auxiliaries
     std::vector<Point> aux;
-    aux[0] = p[0];
-    aux[1] = p[1];
-    hexEdges[0] = Edge(0, 2, aux);
-    aux[0] = p[1];
-    aux[1] = p[2];
-    hexEdges[1] = Edge(0, 2, aux);
-    aux[0] = p[2];
-    aux[1] = p[3];
-    hexEdges[2] = Edge(0, 2, aux);
-    aux[0] = p[3];
-    aux[1] = p[0];
-    hexEdges[3] = Edge(0, 2, aux);
-    aux[0] = p[4];
-    aux[1] = p[5];
-    hexEdges[4] = Edge(0, 2, aux);
-    aux[0] = p[5];
-    aux[1] = p[6];
-    hexEdges[5] = Edge(0, 2, aux);
-    aux[0] = p[6];
-    aux[1] = p[7];
-    hexEdges[6] = Edge(0, 2, aux);
-    aux[0] = p[7];
-    aux[1] = p[4];
-    hexEdges[7] = Edge(0, 2, aux);
-    aux[0] = p[0];
-    aux[1] = p[4];
-    hexEdges[8] = Edge(0, 2, aux);
-    aux[0] = p[1];
-    aux[1] = p[5];
-    hexEdges[9] = Edge(0, 2, aux);
-    aux[0] = p[2];
-    aux[1] = p[6];
-    hexEdges[10] = Edge(0, 2, aux);
-    aux[0] = p[3];
-    aux[1] = p[7];
-    hexEdges[11] = Edge(0, 2, aux);
+    long unsigned int c = 8;
+
+    // Edge 0 = {0,1,c...}
+    aux.push_back(p[0]);
+    aux.push_back(p[1]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(0, aux));
+
+    // Edge 1 = {1,2,c...}
+    aux.push_back(p[1]);
+    aux.push_back(p[2]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(1, aux));
+
+    // Edge 2 = {2,3,c...}
+    aux.push_back(p[2]);
+    aux.push_back(p[3]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(2, aux));
+
+    // Edge 3 = {3,0,c...}
+    aux.push_back(p[3]);
+    aux.push_back(p[0]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(3, aux));
+
+    // Edge 4 = {4,5,c...}
+    aux.push_back(p[4]);
+    aux.push_back(p[5]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(4, aux));
+
+    // Edge 5 = {5,6,c...}
+    aux.push_back(p[5]);
+    aux.push_back(p[6]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(5, aux));
+
+    // Edge 6 = {6,7,c...}
+    aux.push_back(p[6]);
+    aux.push_back(p[7]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(6, aux));
+
+    // Edge 7 = {7,4,c...}
+    aux.push_back(p[7]);
+    aux.push_back(p[4]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(7, aux));
+
+    // Edge 8 = {0,4,c...}
+    aux.push_back(p[0]);
+    aux.push_back(p[4]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(8, aux));
+
+    // Edge 9 = {1,5,c...}
+    aux.push_back(p[1]);
+    aux.push_back(p[5]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(9, aux));
+
+    // Edge 10 = {2,6,c...}
+    aux.push_back(p[2]);
+    aux.push_back(p[6]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(10, aux));
+
+    // Edge 11 = {3,7,c...}
+    aux.push_back(p[3]);
+    aux.push_back(p[7]);
+    for (int i = 1; i < elemOrder; i++)
+    {
+        aux.push_back(p[c]);
+        c++;
+    }
+    hexEdge.push_back(Edge(11, aux));
+
+    for (long unsigned int i = 0; i < 12; i++)
+    {
+        hexEdge[i].setEdgeNumPoints(elemOrder);
+    }
 }
 
 void Hexahedron::buildHexaFaces(std::vector<Point> p)

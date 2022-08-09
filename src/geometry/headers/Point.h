@@ -37,6 +37,7 @@ class Point
         std::vector<float> getPointXYZ();
         // Setters
         void setPointXYZ(float x, float y, float z);
+        // Other methods
 };
 
 #endif // !POINT_H
