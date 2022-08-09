@@ -9,7 +9,6 @@
  * 
  */
 
-#include <iostream>
 #include "Hexahedron.h"
 
 Hexahedron::Hexahedron(int n1, int n2, std::vector<Point> p)
