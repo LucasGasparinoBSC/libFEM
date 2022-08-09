@@ -34,6 +34,9 @@ class Face
         Face(int n1, int n2);
         // Destructor
         ~Face();
+        // Getters
+        int getFaceID();
+        int getFaceNumPoints();
 };
 
 #endif

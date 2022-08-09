@@ -37,3 +37,27 @@ Face::~Face()
 {
 
 }
+
+// Getters
+
+/**
+ * @brief Get face ID attribute.
+ * @details The getFaceID method returns the face ID.
+ * 
+ * @return The face ID.
+ */
+int Face::getFaceID()
+{
+    return fID;
+}
+
+/**
+ * @brief Get face number of points attribute.
+ * @details The getFaceNumPoints method returns the number of points in the face.
+ * 
+ * @return The number of points in the face.
+ */
+int Face::getFaceNumPoints()
+{
+    return fNumPoints;
+}
