@@ -39,7 +39,7 @@ class Element
         // Data
         // Methods
         // Constructor
-        Element(int n1, int n2, int n3, int n4);
+        Element();
         // Destructor
         ~Element();
 };
