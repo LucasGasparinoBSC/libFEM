@@ -19,6 +19,7 @@
 
 // Classes to include
 #include "Element.h"
+#include "Polynomial.h"
 
 class Hexahedron : public Element
 {
