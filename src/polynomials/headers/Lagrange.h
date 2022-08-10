@@ -6,18 +6,10 @@
 class Lagrange : public Polynomial
 {
     private:
-        // Data
-        // Methods
+        std::vector<float> polyCreateGrid(); // Create a Lagrange grid of points to evaluate the polynomial
     public:
-        // Data
-        // Methods
-        // Constructor
-        Lagrange();
-        // Destructor
+        Lagrange(long unsigned int n1);
         ~Lagrange();
-        // Getters
-        // Setters
-        // Other methods
 };
 
 #endif

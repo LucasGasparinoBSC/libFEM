@@ -1,11 +1,6 @@
 #include "Polynomial.h"
 
-Polynomial::Polynomial()
+std::vector<float> Polynomial::polyCreateGrid()
 {
-
-}
-
-Polynomial::~Polynomial()
-{
-
+    return polyGrid;
 }
