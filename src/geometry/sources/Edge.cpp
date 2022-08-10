@@ -22,7 +22,7 @@
  * @param n2 Number of points in the edge
  * @param p Edge points
  */
-Edge::Edge(int n1, std::vector<Point> p)
+Edge::Edge(long unsigned int n1, std::vector<Point> p)
 {
     edgeID = n1;
     edgePoints = p;
@@ -47,7 +47,7 @@ Edge::~Edge()
  *
  * @return The edge ID.
  */
-int Edge::getEdgeID()
+long unsigned int Edge::getEdgeID()
 {
     return edgeID;
 }
@@ -58,7 +58,7 @@ int Edge::getEdgeID()
  *
  * @return The number of points in the edge.
  */
-int Edge::getEdgeNumPoints()
+long unsigned int Edge::getEdgeNumPoints()
 {
     return edgeNumPoints;
 }
@@ -99,7 +99,7 @@ void Edge::printEdge()
     std::cout << "  -Number of points: " << edgeNumPoints << std::endl;
     std::cout << "  -Length: " << edgeLength << std::endl;
     std::cout << "  -Points: " << std::endl;
-    for (int i = 0; i < edgeNumPoints; i++)
+    for (long unsigned int i = 0; i < edgeNumPoints; i++)
     {
         edgePoints[i].printPoint();
     }

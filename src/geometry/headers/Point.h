@@ -23,18 +23,18 @@ class Point
 {
     private:
         // Data
-        int pointID;                 // Point ID
+        long unsigned int pointID;                 // Point ID
         std::vector<float> pointXYZ; // Point coordinates
         // Methods
     public:
         // Data
         // Methods
         // Constructor
-        Point(int n);
+        Point(long unsigned int n);
         // Destructor
         ~Point();
         // Getters
-        int getPointID();
+        long unsigned int getPointID();
         std::vector<float> getPointXYZ();
         // Setters
         void setPointXYZ(float x, float y, float z);

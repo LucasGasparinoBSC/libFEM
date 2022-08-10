@@ -26,9 +26,9 @@ class Face
 {
     private:
         // Data
-        int faceID;                    // Face ID
-        int faceNumPoints;             // Number of points in the face
-        int faceNumEdges;              // Number of edges in the face
+        long unsigned int faceID;                    // Face ID
+        long unsigned int faceNumPoints;             // Number of points in the face
+        long unsigned int faceNumEdges;              // Number of edges in the face
         std::vector<Point> facePoints; // Face points
         std::vector<Edge> faceEdges;   // Face edges
         // Methods
@@ -36,13 +36,13 @@ class Face
         // Data
         // Methods
         // Constructor
-        Face(int n1, std::vector<Point> p, std::vector<Edge> e);
+        Face(long unsigned int n1, std::vector<Point> p, std::vector<Edge> e);
         // Destructor
         ~Face();
         // Getters
-        int getFaceID();
-        int getFaceNumPoints();
-        int getFaceNumEdges();
+        long unsigned int getFaceID();
+        long unsigned int getFaceNumPoints();
+        long unsigned int getFaceNumEdges();
         std::vector<Point> getFacePoints();
         std::vector<Edge> getFaceEdges();
         // Setters

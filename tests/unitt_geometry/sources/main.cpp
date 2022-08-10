@@ -8,9 +8,9 @@
 
 int main()
 {
-    int hexID = 1;
+    long unsigned int hexID = 1;
     std::vector<Point> p;
-    for (int i = 0; i < 27; i++)
+    for (long unsigned int i = 0; i < 27; i++)
     {
         p.push_back(Point(i));
     }

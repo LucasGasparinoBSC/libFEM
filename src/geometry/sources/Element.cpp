@@ -29,7 +29,7 @@ Element::~Element()
  *
  * @return The elementID of the element object.
  */
-int Element::getElemID()
+long unsigned int Element::getElemID()
 {
     return elemID;
 }
@@ -41,7 +41,7 @@ int Element::getElemID()
  *
  * @return The elemNumPoints of the element object.
  */
-int Element::getElemNumPoints()
+long unsigned int Element::getElemNumPoints()
 {
     return elemNumPoints;
 }
@@ -53,7 +53,7 @@ int Element::getElemNumPoints()
  *
  * @return The elemNumEdges of the element object.
  */
-int Element::getElemNumEdges()
+long unsigned int Element::getElemNumEdges()
 {
     return elemNumEdges;
 }
@@ -65,7 +65,7 @@ int Element::getElemNumEdges()
  *
  * @return The elemNumFaces of the element object.
  */
-int Element::getElemNumFaces()
+long unsigned int Element::getElemNumFaces()
 {
     return elemNumFaces;
 }
@@ -77,7 +77,7 @@ int Element::getElemNumFaces()
  *
  * @return The elemOrder of the element object.
  */
-int Element::getElemOrder()
+long unsigned int Element::getElemOrder()
 {
     return elemOrder;
 }
@@ -127,19 +127,19 @@ void Element::printElement()
     std::cout << "  -Number of points: " << elemNumPoints << std::endl;
     std::cout << "  -Number of edges: " << elemNumEdges << std::endl;
     std::cout << "  -Points: " << std::endl;
-    for (int i = 0; i < elemNumPoints; i++)
+    for (long unsigned int i = 0; i < elemNumPoints; i++)
     {
         elemPoints[i].printPoint();
     }
     std::cout << std::endl;
     std::cout << "  -Edges: " << std::endl;
-    for (int i = 0; i < elemNumEdges; i++)
+    for (long unsigned int i = 0; i < elemNumEdges; i++)
     {
         elemEdges[i].printEdge();
     }
     std::cout << std::endl;
     std::cout << "  -Faces: " << std::endl;
-    for (int i = 0; i < elemNumFaces; i++)
+    for (long unsigned int i = 0; i < elemNumFaces; i++)
     {
         elemFaces[i].printFace();
     }

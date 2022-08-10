@@ -13,7 +13,7 @@
 
 // Constructor
 /**
- * Point::Point(int n1, int n2, int n3)
+ * Point::Point(long unsigned int n1, long unsigned int n2, long unsigned int n3)
  *
  * @brief Construct a new point object.
  *
@@ -22,7 +22,7 @@
  *
  * @param n The point ID
  */
-Point::Point(int n)
+Point::Point(long unsigned int n)
 {
     pointID = n;             // Set thhe point ID
     pointXYZ.push_back(0.0); // Init x to 0
@@ -53,7 +53,7 @@ Point::~Point()
  *
  * @return The point ID.
  */
-int Point::getPointID()
+long unsigned int Point::getPointID()
 {
     return pointID;
 }

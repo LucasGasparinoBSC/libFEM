@@ -25,8 +25,8 @@ class Edge
 {
     private:
         // Data
-        int edgeID;                    // Edge ID
-        int edgeNumPoints;             // Number of points in the edge
+        long unsigned int edgeID;                    // Edge ID
+        long unsigned int edgeNumPoints;             // Number of points in the edge
         float edgeLength;              // Length of the edge
         std::vector<Point> edgePoints; // Edge points
         // Methods
@@ -34,12 +34,12 @@ class Edge
         // Data
         // Methods
         // Constructor
-        Edge(int n1, std::vector<Point> p);
+        Edge(long unsigned int n1, std::vector<Point> p);
         // Destructor
         ~Edge();
         // Getters
-        int getEdgeID();
-        int getEdgeNumPoints();
+        long unsigned int getEdgeID();
+        long unsigned int getEdgeNumPoints();
         float getEdgeLength();
         std::vector<Point> getEdgePoints();
         // Setters

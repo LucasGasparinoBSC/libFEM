@@ -13,7 +13,7 @@
 
 // Constructor
 /**
- * Face::Face(int n1, std::vector<Point> p, std::vector<Edge> e)
+ * Face::Face(long unsigned int n1, std::vector<Point> p, std::vector<Edge> e)
  *
  * @brief Construct a new face object.
  *
@@ -24,7 +24,7 @@
  * @param p vector of points that make up the face
  * @param e vector of edges
  */
-Face::Face(int n1, std::vector<Point> p, std::vector<Edge> e)
+Face::Face(long unsigned int n1, std::vector<Point> p, std::vector<Edge> e)
 {
     faceID = n1;
     facePoints = p;
@@ -56,7 +56,7 @@ Face::~Face()
  *
  * @return The faceID of the face object.
  */
-int Face::getFaceID()
+long unsigned int Face::getFaceID()
 {
     return faceID;
 }
@@ -70,7 +70,7 @@ int Face::getFaceID()
  *
  * @return The number of points in the face.
  */
-int Face::getFaceNumPoints()
+long unsigned int Face::getFaceNumPoints()
 {
     return faceNumPoints;
 }
@@ -84,7 +84,7 @@ int Face::getFaceNumPoints()
  *
  * @return The number of edges in the face.
  */
-int Face::getFaceNumEdges()
+long unsigned int Face::getFaceNumEdges()
 {
     return faceNumEdges;
 }
@@ -133,13 +133,13 @@ void Face::printFace()
     std::cout << "  -Number of points: " << faceNumPoints << std::endl;
     std::cout << "  -Number of edges: " << faceNumEdges << std::endl;
     std::cout << "  -Points: " << std::endl;
-    for (int i = 0; i < faceNumPoints; i++)
+    for (long unsigned int i = 0; i < faceNumPoints; i++)
     {
         facePoints[i].printPoint();
     }
     std::cout << std::endl;
     std::cout << "  -Edges: " << std::endl;
-    for (int i = 0; i < faceNumEdges; i++)
+    for (long unsigned int i = 0; i < faceNumEdges; i++)
     {
         faceEdges[i].printEdge();
     }

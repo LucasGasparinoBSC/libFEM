@@ -29,11 +29,11 @@ class Element
         // Methods
     protected:
         // Data
-        int elemID;                    // Element ID
-        int elemNumPoints;             // Number of points in the element
-        int elemNumEdges;              // Number of edges in the element
-        int elemNumFaces;              // Number of faces in the element
-        int elemOrder;                 // Order of the element
+        long unsigned int elemID;                    // Element ID
+        long unsigned int elemNumPoints;             // Number of points in the element
+        long unsigned int elemNumEdges;              // Number of edges in the element
+        long unsigned int elemNumFaces;              // Number of faces in the element
+        long unsigned int elemOrder;                 // Order of the element
         std::vector<Point> elemPoints; // Element points
         std::vector<Edge> elemEdges;   // Element edges
         std::vector<Face> elemFaces;   // Element faces
@@ -46,11 +46,11 @@ class Element
         // Destructor
         ~Element();
         // Getters
-        int getElemID();
-        int getElemNumPoints();
-        int getElemNumEdges();
-        int getElemNumFaces();
-        int getElemOrder();
+        long unsigned int getElemID();
+        long unsigned int getElemNumPoints();
+        long unsigned int getElemNumEdges();
+        long unsigned int getElemNumFaces();
+        long unsigned int getElemOrder();
         std::vector<Point> getElemPoints();
         std::vector<Edge> getElemEdges();
         std::vector<Face> getElemFaces();
