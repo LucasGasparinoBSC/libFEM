@@ -29,14 +29,14 @@ class Element
         // Methods
     protected:
         // Data
-        long unsigned int elemID;                    // Element ID
-        long unsigned int elemNumPoints;             // Number of points in the element
-        long unsigned int elemNumEdges;              // Number of edges in the element
-        long unsigned int elemNumFaces;              // Number of faces in the element
-        long unsigned int elemOrder;                 // Order of the element
-        std::vector<Point> elemPoints; // Element points
-        std::vector<Edge> elemEdges;   // Element edges
-        std::vector<Face> elemFaces;   // Element faces
+        long unsigned int elemID;        // Element ID
+        long unsigned int elemNumPoints; // Number of points in the element
+        long unsigned int elemNumEdges;  // Number of edges in the element
+        long unsigned int elemNumFaces;  // Number of faces in the element
+        long unsigned int elemOrder;     // Order of the element
+        std::vector<Point> elemPoints;   // Element points
+        std::vector<Edge> elemEdges;     // Element edges
+        std::vector<Face> elemFaces;     // Element faces
         // Methods
     public:
         // Data

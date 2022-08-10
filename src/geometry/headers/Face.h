@@ -26,11 +26,11 @@ class Face
 {
     private:
         // Data
-        long unsigned int faceID;                    // Face ID
-        long unsigned int faceNumPoints;             // Number of points in the face
-        long unsigned int faceNumEdges;              // Number of edges in the face
-        std::vector<Point> facePoints; // Face points
-        std::vector<Edge> faceEdges;   // Face edges
+        long unsigned int faceID;        // Face ID
+        long unsigned int faceNumPoints; // Number of points in the face
+        long unsigned int faceNumEdges;  // Number of edges in the face
+        std::vector<Point> facePoints;   // Face points
+        std::vector<Edge> faceEdges;     // Face edges
         // Methods
     public:
         // Data

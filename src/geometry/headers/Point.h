@@ -23,7 +23,7 @@ class Point
 {
     private:
         // Data
-        long unsigned int pointID;                 // Point ID
+        long unsigned int pointID;   // Point ID
         std::vector<float> pointXYZ; // Point coordinates
         // Methods
     public:

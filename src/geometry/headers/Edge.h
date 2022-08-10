@@ -25,10 +25,10 @@ class Edge
 {
     private:
         // Data
-        long unsigned int edgeID;                    // Edge ID
-        long unsigned int edgeNumPoints;             // Number of points in the edge
-        float edgeLength;              // Length of the edge
-        std::vector<Point> edgePoints; // Edge points
+        long unsigned int edgeID;        // Edge ID
+        long unsigned int edgeNumPoints; // Number of points in the edge
+        float edgeLength;                // Length of the edge
+        std::vector<Point> edgePoints;   // Edge points
         // Methods
     public:
         // Data
