@@ -4,7 +4,7 @@ file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 set(HEADER_DIR ${CMAKE_CURRENT_LIST_DIR}/headers)
 file(GLOB HEADER_FILES ${HEADER_DIR}/*.h)
 
-include_directories(SYSTEM ${HEADER_DIR} ${geometry_INCLUDE_DIRS} ${polynomials_INCLUDE_DIRS} ${quadratures_INCLUDE_DIRS})
+include_directories(SYSTEM ${HEADER_DIR} ${geometry_INCLUDE_DIRS} ${polynomials_INCLUDE_DIRS})
 
 add_definitions(-D__BUILD_VERSION__="${TEST_VERSION}")
 

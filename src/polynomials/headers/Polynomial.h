@@ -4,7 +4,6 @@
 #include <vector>
 #include <cmath>
 
-#include "Quadrature.h"
 
 class Polynomial
 {
@@ -17,7 +16,7 @@ class Polynomial
         std::vector<float> polyDerivVals;    // Array of polynomial derivative values
         std::vector<float> polyCreateGrid(); // Create the grid of points to evaluate the polynomial
     public:
-        std::vector<float> polyEval();
+        std::vector<float> polyEval(float xi);
         std::vector<float> polyEvalDeriv();
 };
 

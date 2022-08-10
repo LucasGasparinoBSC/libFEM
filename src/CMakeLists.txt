@@ -1,3 +1,2 @@
-add_subdirectory(quadratures)
 add_subdirectory(polynomials)
 add_subdirectory(geometry)
