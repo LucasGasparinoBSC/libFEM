@@ -13,6 +13,7 @@
 #define ELEMENT_H
 
 // STL libraries
+#include <iostream>
 #include <vector>
 #include <cmath>
 
@@ -28,14 +29,14 @@ class Element
         // Methods
     protected:
         // Data
-        int elemID;                   // Element ID
-        int elemNumPoints;            // Number of points in the element
-        int elemNumEdges;             // Number of edges in the element
-        int elemNumFaces;             // Number of faces in the element
-        int elemOrder;                // Order of the element
-        std::vector<Point> elemPoint; // Element points
-        std::vector<Edge> elemEdge;   // Element edges
-        std::vector<Face> elemFace;   // Element faces
+        int elemID;                    // Element ID
+        int elemNumPoints;             // Number of points in the element
+        int elemNumEdges;              // Number of edges in the element
+        int elemNumFaces;              // Number of faces in the element
+        int elemOrder;                 // Order of the element
+        std::vector<Point> elemPoints; // Element points
+        std::vector<Edge> elemEdges;   // Element edges
+        std::vector<Face> elemFaces;   // Element faces
         // Methods
     public:
         // Data
@@ -45,7 +46,17 @@ class Element
         // Destructor
         ~Element();
         // Getters
+        int getElemID();
+        int getElemNumPoints();
+        int getElemNumEdges();
+        int getElemNumFaces();
+        int getElemOrder();
+        std::vector<Point> getElemPoints();
+        std::vector<Edge> getElemEdges();
+        std::vector<Face> getElemFaces();
         // Setters
+        // Printer
+        void printElement();
         // Other methods
 };
 

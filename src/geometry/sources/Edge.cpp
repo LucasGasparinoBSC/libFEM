@@ -25,7 +25,9 @@
 Edge::Edge(int n1, std::vector<Point> p)
 {
     edgeID = n1;
-    edgePoint = p;
+    edgePoints = p;
+    edgeNumPoints = edgePoints.size();
+    edgeLength = computeEdgeLength();
 }
 
 // Destructor
@@ -35,7 +37,6 @@ Edge::Edge(int n1, std::vector<Point> p)
  */
 Edge::~Edge()
 {
-
 }
 
 // Getters
@@ -43,7 +44,7 @@ Edge::~Edge()
 /**
  * @brief Get edge ID attribute.
  * @details The getEdgeID method returns the edge ID.
- * 
+ *
  * @return The edge ID.
  */
 int Edge::getEdgeID()
@@ -54,7 +55,7 @@ int Edge::getEdgeID()
 /**
  * @brief Get edge number of points attribute.
  * @details The getEdgeNumPoints method returns the number of points in the edge.
- * 
+ *
  * @return The number of points in the edge.
  */
 int Edge::getEdgeNumPoints()
@@ -70,7 +71,7 @@ int Edge::getEdgeNumPoints()
  */
 std::vector<Point> Edge::getEdgePoints()
 {
-    return edgePoint;
+    return edgePoints;
 }
 
 /**
@@ -86,29 +87,36 @@ float Edge::getEdgeLength()
 }
 
 // Setters
+
+// Printers
 /**
- * @brief Set edge number of points attribute.
- * @details The setEdgeNumPoints method sets the number of points in the edge.
- * 
- * @param n The number of points in the edge.
+ * @brief Print the edge object.
+ * @details The printEdge method prints the edge object.
  */
-void Edge::setEdgeNumPoints(int n)
+void Edge::printEdge()
 {
-    edgeNumPoints = n;
+    std::cout << "Edge ID: " << edgeID << std::endl;
+    std::cout << "  -Number of points: " << edgeNumPoints << std::endl;
+    std::cout << "  -Length: " << edgeLength << std::endl;
+    std::cout << "  -Points: " << std::endl;
+    for (int i = 0; i < edgeNumPoints; i++)
+    {
+        edgePoints[i].printPoint();
+    }
 }
 
 // Other methods
 
 /**
  * @brief Compute the length of the edge.
- * 
+ *
  * @details This function computes the length of an edge by taking the difference between the x, y, and z
  * coordinates of the two points that make up the edge ends, and then taking the square root of the sum of
  * the squares of the differences. Assumes that points 0 and 1 are the endpoints.
  */
-void Edge::computeEdgeLength()
+float Edge::computeEdgeLength()
 {
-    std::vector<float> eBegin = edgePoint[0].getPointXYZ();
-    std::vector<float> eEnd = edgePoint[1].getPointXYZ();
-    edgeLength = sqrt(pow(eEnd[0] - eBegin[0], 2) + pow(eEnd[1] - eBegin[1], 2) + pow(eEnd[2] - eBegin[2], 2));
+    std::vector<float> eBegin = edgePoints[0].getPointXYZ();
+    std::vector<float> eEnd = edgePoints[1].getPointXYZ();
+    return edgeLength = sqrt(pow(eEnd[0] - eBegin[0], 2) + pow(eEnd[1] - eBegin[1], 2) + pow(eEnd[2] - eBegin[2], 2));
 }

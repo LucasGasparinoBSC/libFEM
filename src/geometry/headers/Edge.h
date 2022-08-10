@@ -4,9 +4,9 @@
  * @brief Defines an edge object type.
  * @version 0.1
  * @date 2022-08-09
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 
 // Header guard
@@ -14,6 +14,7 @@
 #define EDGE_H
 
 // STL libraries
+#include <iostream>
 #include <vector>
 #include <cmath>
 
@@ -24,31 +25,28 @@ class Edge
 {
     private:
         // Data
-        int edgeID;                   // Edge ID
-        int edgeNumPoints;            // Number of points in the edge
-        float edgeLength;             // Length of the edge
-        std::vector<Point> edgePoint; // Edge points
+        int edgeID;                    // Edge ID
+        int edgeNumPoints;             // Number of points in the edge
+        float edgeLength;              // Length of the edge
+        std::vector<Point> edgePoints; // Edge points
         // Methods
     public:
         // Data
         // Methods
-
         // Constructor
         Edge(int n1, std::vector<Point> p);
         // Destructor
         ~Edge();
-
         // Getters
         int getEdgeID();
         int getEdgeNumPoints();
-        std::vector<Point> getEdgePoints();
         float getEdgeLength();
-
+        std::vector<Point> getEdgePoints();
         // Setters
-        void setEdgeNumPoints(int n);
-
+        // Printers
+        void printEdge();
         // Other methods
-        void computeEdgeLength();
+        float computeEdgeLength();
 };
 
 #endif

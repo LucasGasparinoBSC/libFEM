@@ -15,6 +15,7 @@
 
 // STL libraries
 #include <vector>
+#include <iostream>
 
 // Classes to include
 
@@ -22,8 +23,8 @@ class Point
 {
     private:
         // Data
-        int pID;                 // Point ID
-        std::vector<float> pXYZ; // Point coordinates
+        int pointID;                 // Point ID
+        std::vector<float> pointXYZ; // Point coordinates
         // Methods
     public:
         // Data
@@ -37,6 +38,8 @@ class Point
         std::vector<float> getPointXYZ();
         // Setters
         void setPointXYZ(float x, float y, float z);
+        // Printers
+        void printPoint();
         // Other methods
 };
 
