@@ -1,1 +1,2 @@
+add_subdirectory(unitt_polynomials)
 add_subdirectory(unitt_geometry)
