@@ -35,8 +35,8 @@ class Hexahedron : public Element
         // Getters
         // Setters
         // Other methods
-        void buildHexaEdges(std::vector<Point> p);
-        void buildHexaFaces(std::vector<Point> p);
+        void buildHexaEdges();
+        void buildHexaFaces();
 };
 
 #endif // HEXAHEDRON_H

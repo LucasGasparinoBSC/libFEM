@@ -16,7 +16,6 @@ int main()
     }
 
     Hexahedron h(hexID, 2, p);
-    h.buildHexaEdges(p);
 
     return 0;
 }
